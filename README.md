@@ -20,6 +20,7 @@ The dataset includes the following files:
 - 'codebook.txt': yes it is!
 
 - 'features_info.txt': The original dataset's codebook
+- 'features.txt': The original dataset's features
 
 - 'activity_labels.txt': Links the class labels with their activity name.
 
