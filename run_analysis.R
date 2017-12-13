@@ -14,7 +14,6 @@ library(tidyr)
 # Step Zero:
 # Download https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-setwd("data")
 fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 destfile <- "UCI_HAR_Dataset.zip"
 download.file(fileURL, destfile = destfile, method = "curl")
@@ -25,7 +24,6 @@ unzip(destfile)
 setwd("UCI HAR Dataset")
 test_x <- read.table("test/X_test.txt", header = FALSE)
 train_x <- read.table("train/X_train.txt", header = FALSE)
-ls()
 activities <- read.table("activity_labels.txt",header = FALSE)
 # Add the "activity" column from the test y data
 
@@ -102,5 +100,5 @@ for ( nm in summarynames ){
 }
 names(allsummary) <- newsummarynames
 
-head(allsummary)
+write.csv(allsummary, file="summaryAveStdev.csv")
 
