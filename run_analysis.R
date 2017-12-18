@@ -100,5 +100,5 @@ for ( nm in summarynames ){
 }
 names(allsummary) <- newsummarynames
 
-write.csv(allsummary, file="summaryAveStdev.csv")
+write.table(allsummary, file="summaryAveStdev.txt", row.names = FALSE)
 
